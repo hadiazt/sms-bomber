@@ -12,7 +12,22 @@ module.exports = ({ number }) => {
         {
             "url": "https://app.snapp.taxi/api/api-passenger-oauth/v2/otp",
             "data": { cellphone: `+98${number}` },
-            "headers": { "Host": "app.snapp.taxi", "content-length": "29", "x-app-name": "passenger-pwa", "x-app-version": "5.0.0", "app-version": "pwa", "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36", "content-type": "application/json", "accept": "*/*", "origin": "https://app.snapp.taxi", "sec-fetch-site": "same-origin", "sec-fetch-mode": "cors", "sec-fetch-dest": "empty", "referer": "https://app.snapp.taxi/login/?redirect_to\u003d%2F", "accept-encoding": "gzip, deflate, br", "accept-language": "fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6", "cookie": "_gat\u003d1" },
+            "headers": {
+                "Host": "app.snapp.taxi",
+                "content-length": "29",
+                "x-app-name": "passenger-pwa",
+                "x-app-version": "5.0.0",
+                "app-version": "pwa", "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36",
+                "content-type": "application/json",
+                "accept": "*/*",
+                "origin": "https://app.snapp.taxi",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-dest": "empty",
+                "referer": "https://app.snapp.taxi/login/?redirect_to\u003d%2F",
+                "accept-encoding": "gzip, deflate, br",
+                "accept-language": "fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6", "cookie": "_gat\u003d1"
+            },
             "name": "snapp",
             "type": "WEB",
             "method": "POST"
@@ -90,12 +105,36 @@ module.exports = ({ number }) => {
         {
             "url": `https://api.torob.com/a/phone/send-pin/?phone_number=0${number}`,
             "name": "torob",
-            "headers" : { "Host": "api.torob.com", "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36", "accept": "*/*", "origin": "https://torob.com", "sec-fetch-site": "same-site", "sec-fetch-mode": "cors", "sec-fetch-dest": "empty", "referer": "https://torob.com/user/", "accept-encoding": "gzip, deflate, br", "accept-language": "fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6", "cookie": "amplitude_id_95d1eb61107c6d4a0a5c555e4ee4bfbbtorob.com\u003deyJkZXZpY2VJZCI6ImFiOGNiOTUyLTk1MTgtNDhhNS1iNmRjLTkwZjgxZTFjYmM3ZVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTU5Njg2OTI4ODM1MSwibGFzdEV2ZW50VGltZSI6MTU5Njg2OTI4ODM3NCwiZXZlbnRJZCI6MSwiaWRlbnRpZnlJZCI6Miwic2VxdWVuY2VOdW1iZXIiOjN9" },
+            "headers": {
+                "Host": "api.torob.com",
+                "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36",
+                "accept": "*/*",
+                "origin": "https://torob.com",
+                "sec-fetch-site": "same-site",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-dest": "empty",
+                "referer": "https://torob.com/user/",
+                "accept-encoding": "gzip, deflate, br",
+                "accept-language": "fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6",
+                "cookie": "amplitude_id_95d1eb61107c6d4a0a5c555e4ee4bfbbtorob.com\u003deyJkZXZpY2VJZCI6ImFiOGNiOTUyLTk1MTgtNDhhNS1iNmRjLTkwZjgxZTFjYmM3ZVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTU5Njg2OTI4ODM1MSwibGFzdEV2ZW50VGltZSI6MTU5Njg2OTI4ODM3NCwiZXZlbnRJZCI6MSwiaWRlbnRpZnlJZCI6Miwic2VxdWVuY2VOdW1iZXIiOjN9"
+            },
             "type": "WEB"
         },
         {
             "url": `https://core.gap.im/v1/user/add.json?mobile=0${number}`,
-            "headers": { "Host": "core.gap.im", "accept": "application/json, text/plain, */*", "x-version": "4.5.7", "accept-language": "fa", "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36", "appversion": "web", "origin": "https://web.gap.im", "sec-fetch-site": "same-site", "sec-fetch-mode": "cors", "sec-fetch-dest": "empty", "referer": "https://web.gap.im/", "accept-encoding": "gzip, deflate, br" },
+            "headers": {
+                "Host": "core.gap.im",
+                "accept": "application/json, text/plain, */*",
+                "x-version": "4.5.7",
+                "accept-language": "fa",
+                "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36",
+                "appversion": "web", "origin": "https://web.gap.im",
+                "sec-fetch-site": "same-site",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-dest": "empty",
+                "referer": "https://web.gap.im/",
+                "accept-encoding": "gzip, deflate, br"
+            },
             "name": "coregap",
             "type": "WEB"
         },

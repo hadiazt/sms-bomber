@@ -25,11 +25,10 @@ module.exports = ({ number }) => {
                     console.log("ERROR :\n" + error);
                 })
             } else {
-                axios.get(item.url.headers).then(function () {
-                    console.log(item.name);
-
+                axios.get(API.url.headers).then(function () {
+                    console.log(API.name);
                 }).catch(error => {
-                    console.log("ERROR");
+                    console.log("ERROR :\n" + error);
                 })
             }
         }

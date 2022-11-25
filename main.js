@@ -1,1 +1,0 @@
-require('./src/routes.js').Bomber({ number: '9036812503' })

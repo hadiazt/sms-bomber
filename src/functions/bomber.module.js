@@ -1,4 +1,4 @@
-// const axios = require('axios')
+const axios = require('axios')
 // const color = require('chalk')
 
 module.exports = ({ number }) => {
@@ -11,7 +11,27 @@ module.exports = ({ number }) => {
     setInterval(function () {
         for (let num = 0; num < list.length; num++) {
             const API = list[num];
-            console.log(API);
+
+            if (!API.headers) {
+                var headers = {}
+            } else {
+                var headers = API.headers;
+            }
+
+            if (API.method == "POST") {
+                axios.post(API.url, API.data, headers).then(function () {
+                    console.log(API.name);
+                }).catch(error => {
+                    console.log("ERROR :\n" + error);
+                })
+            } else {
+                axios.get(item.url.headers).then(function () {
+                    console.log(item.name);
+
+                }).catch(error => {
+                    console.log("ERROR");
+                })
+            }
         }
         // }, 30000);
     }, 1000);

@@ -1,0 +1,19 @@
+{
+  "name": "sms-bomber",
+  "version": "0.0.1",
+  "description": "SMS Bomber Script",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadiazt/sms-bomber.git"
+  },
+  "author": "hadiazt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hadiazt/sms-bomber/issues"
+  },
+  "homepage": "https://github.com/hadiazt/sms-bomber#readme"
+}

@@ -4,7 +4,7 @@ const color = require('chalk')
 module.exports = ({ number }) => {
 
     const validate = number.search(/^9\d{9}$/i);
-    if (validate !== 0) return console.log("Invalid Format");
+    if (validate !== 0) return console.log(color.red("ERROR :\nInvalid Format"));
 
     require('../routes.js').API({ number })
 
@@ -20,7 +20,7 @@ module.exports = ({ number }) => {
 
             if (API.method == "POST") {
                 axios.post(API.url, API.data, headers).then(function () {
-                    console.log(color.green('Request From ' + API.name + " Sent"));
+                    console.log(color.green(`Request From ${API.name} Sends To ${number} | `));
                 }).catch(error => {
                     console.log(color.red("ERROR :\n" + error));
                 })

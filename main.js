@@ -1,1 +1,1 @@
-require('./src/routes.js').Bomber({ number: '90XXXXX503', time: '1000' })
+require('./src/routes.js').Bomber({ number: '903XXXX503', time: '1000' })

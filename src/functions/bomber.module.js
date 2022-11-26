@@ -20,15 +20,15 @@ module.exports = ({ number }) => {
 
             if (API.method == "POST") {
                 axios.post(API.url, API.data, headers).then(function () {
-                    console.log(color.green(`Request From ${API.name} Sends To ${number} | `));
+                    console.log(color.green(`Request From ${API.name} Sends To ${number} | ${num}`));
                 }).catch(error => {
-                    console.log(color.red("ERROR :\n" + error));
+                    console.log(color.red(`ERROR :\n ${error}`));
                 })
             } else {
                 axios.get(API.url.headers).then(function () {
-                    console.log(API.name);
+                    console.log(color.green(`Request From ${API.name} Sends To ${number} | ${num}`));
                 }).catch(error => {
-                    console.log(color.red("ERROR :\n" + error));
+                    console.log(color.red(`ERROR :\n ${error}`));
                 })
             }
         }

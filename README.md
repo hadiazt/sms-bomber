@@ -15,7 +15,7 @@ Have Fun By Spamming To Your Friends ;D
 </br>
 
 ```
-git clone https://github.com/your-username/sms-bomber.git
+git clone https://github.com/hadiazt/sms-bomber.git
 ```
 
 ```

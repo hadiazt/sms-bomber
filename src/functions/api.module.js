@@ -3,6 +3,13 @@ const randomnum = Math.floor(Math.random() * 1000000)
 module.exports = ({ number }) => {
     list = [
         {
+            "url": "https://api.digikala.com/v1/user/authenticate/",
+            "data": { "username": '0' + number },
+            "name": "DigiKala",
+            "type": "WEB",
+            "method": "POST"
+        },
+        {
             "url": "https://shadmessenger12.iranlms.ir",
             "data": {
                 "api_version": "3",

@@ -4,7 +4,7 @@ const color = require('chalk')
 module.exports = ({ number, time }) => {
 
     const validate = number.search(/^9\d{9}$/i);
-    if (validate !== 0) return console.log(color.red("ERROR :\nInvalid Format"));
+    if (validate !== 0) return console.log(color.red("ERROR :\nInvalid Phone Number/Format"));
 
     require('../routes.js').API({ number })
     var q = 0

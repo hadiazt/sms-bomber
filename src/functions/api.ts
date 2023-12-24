@@ -41,7 +41,7 @@ export const API = (number: any) => {
       method: "POST",
     },
     {
-      url: "https://baarbaanet.com/Barbanet/rest/pub/user/otp/send",
+      url: "https://api.baarbaanet.com/v1/pub/otp/send?operation=REGISTER",
       data: {
         mobile: `0${number}`,
         viaSms: true,

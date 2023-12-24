@@ -1,7 +1,5 @@
-import color from "chalk";
 import axios from "axios";
 import { API as APIs } from "./api";
-import { Logger } from "./logger";
 
 export const Attacker = async (num: number, Loop: string) => {
   return new Promise((resolve, reject) => {

@@ -14,7 +14,7 @@ export const Validator = async (Num: string, Loop: string) => {
       else if (Num.startsWith("09")) Num = "9" + Num.split("09")[1];
 
       const loop = setInterval(() => {
-        if (Count === Number(Loop) + 1) {
+        if (Count === Number(Loop)) {
           clearInterval(loop);
           Logger(false, "Process Finished");
         } else {

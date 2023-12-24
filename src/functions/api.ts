@@ -1,5 +1,5 @@
 const randomnum = Math.floor(Math.random() * 1000000);
-export const API = (number: any) => {
+export const API = (number: number) => {
   const list = [
     // ---------------- POSTs ----------------
     {

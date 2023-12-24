@@ -6,7 +6,6 @@ import { Logger } from "./logger";
 export const Attacker = async (num: number, Loop: string) => {
   return new Promise((resolve, reject) => {
     const API = APIs(num)[Math.floor(Math.random() * APIs(num).length)];
-    // const API = APIs(num)[8];
     var headers: object;
     headers = API.headers;
 

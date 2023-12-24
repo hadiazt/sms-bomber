@@ -2,9 +2,12 @@
   "name": "sms-bomber",
   "version": "0.0.1",
   "description": "SMS Bomber Script",
-  "main": "main.js",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "tsc && node ./dist/main.js",
+    "dev": "cls && concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\""
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,13 @@
   },
   "homepage": "https://github.com/hadiazt/sms-bomber#readme",
   "dependencies": {
-    "axios": "^1.2.0",
-    "chalk":"^4.1.2"
+    "axios": "^1.6.2",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.3.3"
   }
 }

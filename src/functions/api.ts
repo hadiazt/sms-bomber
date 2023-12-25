@@ -126,6 +126,53 @@ export const API = (number: number) => {
       type: "WEB",
       method: "POST",
     },
+    {
+      url: "https://api.behtarino.com/api/v1/businesses/uqqnffxwen/vitrin_verification/",
+      data: { phone: `0${number}` },
+      name: "Behtarino",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "http://behtamarket.com//getRegister.php?n=shinaweb&activeBySms=true",
+      data:
+        "e=0" +
+        `${number}` +
+        "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
+      name: "BehtaMarket",
+      type: "APK",
+      method: "POST",
+      package_name: "com.persiandesigners.behtamarket",
+    },
+    {
+      url: "https://kasbinoapp.ir/kasbinoEngine1/RequestC",
+      data: `{"p1001":"0${number}","p1002":"registerSms","token":"e0d4cc39-b5d3-47ea-8ede-6ead5eed3b8a.e000af00-d00d-0da0-0f00-000d00000cc0","RC":"7be86c2a5b54"}`,
+      name: "KasbinoApp",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "https://gateway.telewebion.com/shenaseh/api/v2/auth/step-one",
+      data: {
+        code: "98",
+        phone: `${number}`,
+        smsStatus: "default",
+      },
+      name: "Telewebion",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "http://civapp.ir//getRegister.php?n=shinaweb&activeBySms=true",
+      data:
+        "e=0" +
+        `${number}` +
+        "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
+      name: "Civapp",
+      type: "APK",
+      method: "POST",
+      package_name: "com.persiandesigners.civapp",
+    },
     // ---------------- GETs ----------------
 
     {
@@ -154,96 +201,6 @@ export const API = (number: number) => {
       name: "CoreGap",
       type: "WEB",
     },
-    // {
-    //   url: "https://api.behtarino.com/api/v1/businesses/uqqnffxwen/vitrin_verification/",
-    //   data: { phone: `0${number}` },
-    //   name: "Behtarino",
-    //   type: "WEB",
-    // },
-    // {
-    //   url: "https://customer.didofood.co/api/v1/CustomersRegistrations/send_activation_code",
-    //   data: {
-    //     mobile: `${number}`,
-    //     country_id: 1,
-    //   },
-    //   name: "Didofood",
-    //   type: "WEB",
-    // },
-    // // start andorid api section
-    // {
-    //   url: "https://qestabad.com/wp-admin/admin-ajax.php",
-    //   data:
-    //     "action=digits_check_mob&countrycode=%2B98&mobileNo=" +
-    //     `${number}` +
-    //     "&csrf=014e798716&login=2&username=wdawdwadwadawd&=&=&=&digits=1&json=1&=0&digits_reg_%D8%AD%D8%B1%DB%8C%D9%85%D8%AE%D8%B5%D9%88%D8%B5%DB%8C=1&=wdawdwadwadawd&digregcode=%2B98&=912 839 2129&=&=&=&dig_nounce=014e798716",
-    //   name: "qestabad",
-    //   type: "APK",
-    //   method: "POST",
-    //   package_name: "com.qestabad.online.novinappsaz",
-    //   headers: {
-    //     Host: "qestabad.com",
-    //     "Content-Length": "277",
-    //     Accept: "*/*",
-    //     "X-Requested-With": "XMLHttpRequest",
-    //     "User-Agent":
-    //       "Mozilla/5.0 (Linux; Android 7.1.2; SM-N976N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.131 Mobile Safari/537.36",
-    //     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    //     Origin: "https://qestabad.com",
-    //     "Sec-Fetch-Site": "same-origin",
-    //     "Sec-Fetch-Mode": "cors",
-    //     "Sec-Fetch-Dest": "empty",
-    //     Referer: "https://qestabad.com/my-account/?login=true&back=home&page=1",
-    //     "Accept-Encoding": "gzip, deflate",
-    //     "Accept-Language": "en-US,en;q=0.9",
-    //     Cookie: "digits_countrycode=98",
-    //   },
-    // },
-    // {
-    //   url: "http://behtamarket.com//getRegister.php?n=shinaweb&activeBySms=true",
-    //   data:
-    //     "e=0" +
-    //     `${number}` +
-    //     "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
-    //   name: "BehtaMarket",
-    //   type: "APK",
-    //   method: "POST",
-    //   package_name: "com.persiandesigners.behtamarket",
-    // },
-    // {
-    //   url: `https://api.arasta360.com/api/account/token?phoneNumber=0${number}`,
-    //   name: "Arasta360",
-    //   type: "WEB",
-    //   method: "POST",
-    // },
-    // {
-    //   url: "https://kasbinoapp.ir/kasbinoEngine1/RequestC",
-    //   data: `{"p1001":"0${number}","p1002":"registerSms","token":"e0d4cc39-b5d3-47ea-8ede-6ead5eed3b8a.e000af00-d00d-0da0-0f00-000d00000cc0","RC":"7be86c2a5b54"}`,
-    //   name: "KasbinoApp",
-    //   type: "WEB",
-    //   method: "POST",
-    // },
-    // {
-    //   url: "https://gateway.telewebion.com/shenaseh/api/v2/auth/step-one",
-    //   data: {
-    //     code: "98",
-    //     phone: `${number}`,
-    //     smsStatus: "default",
-    //   },
-    //   name: "Telewebion",
-    //   type: "WEB",
-    //   method: "POST",
-    // },
-    // {
-    //   url: "http://civapp.ir//getRegister.php?n=shinaweb&activeBySms=true",
-    //   data:
-    //     "e=0" +
-    //     `${number}` +
-    //     "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
-    //   name: "Civapp",
-    //   type: "APK",
-    //   method: "POST",
-    //   package_name: "com.persiandesigners.civapp",
-    // },
   ];
   return list;
 };

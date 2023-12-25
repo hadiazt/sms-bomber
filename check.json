@@ -1,0 +1,10 @@
+{
+    "POST": [
+        {
+            "URL": "https://student.classino.com/otp/v1/api/login",
+            "PayLoad": {
+                "mobile": "0XXX"
+            }
+        }
+    ]
+}

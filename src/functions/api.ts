@@ -73,33 +73,59 @@ export const API = (number: number) => {
       type: "WEB",
       method: "POST",
     },
-    // {
-    //   url: "https://api.divar.ir/v5/auth/authenticate",
-    //   data: { phone: `0${number}` },
-    //   name: "Divar",
-    //   type: "WEB",
-    //   method: "POST",
-    // },
-    // {
-    //   url: "https://api.zarinplus.com/user/zarinpal-login",
-    //   data: { phone_number: `98${number}` },
-    //   name: "ZarinPlus",
-    //   type: "WEB",
-    //   method: "POST",
-    // },
-    // {
-    //   url: "https://api.tapsi.cab/api/v2.2/user",
-    //   data: {
-    //     credential: {
-    //       phoneNumber: `0${number}`,
-    //       role: "PASSENGER",
-    //     },
-    //     otpOption: "SMS",
-    //   },
-    //   name: "Tapsi",
-    //   type: "WEB",
-    //   method: "POST",
-    // },
+    {
+      url: "https://api.divar.ir/v5/auth/authenticate",
+      data: { phone: `0${number}` },
+      name: "Divar",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "https://api.zarinplus.com/user/zarinpal-login",
+      data: { phone_number: `98${number}` },
+      name: "ZarinPlus",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "https://api.tapsi.cab/api/v2.2/user",
+      data: {
+        credential: {
+          phoneNumber: `0${number}`,
+          role: "PASSENGER",
+        },
+        otpOption: "ROBO_CALL",
+      },
+      name: "Tapsi",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "https://api.tapsi.cab/api/v2.2/user",
+      data: {
+        credential: {
+          phoneNumber: `0${number}`,
+          role: "PASSENGER",
+        },
+        otpOption: "SMS",
+      },
+      name: "Tapsi",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "https://api2.hitro.mobi/api/passengerinfo/InsertPassenger",
+      data: {
+        ClientId: `0${number}`,
+        ClientSecret: "0501098153736800398716253736091541224",
+        Name: "kdccs",
+        Family: "kdccs",
+        Email: `kdccs${randomnum}du@gmail.com`,
+      },
+      name: "Hitro",
+      type: "WEB",
+      method: "POST",
+    },
     // ---------------- GETs ----------------
 
     {
@@ -123,56 +149,11 @@ export const API = (number: number) => {
       },
       type: "WEB",
     },
-    // {
-    //   url: `https://core.gap.im/v1/user/add.json?mobile=0${number}`,
-    //   headers: {
-    //     Host: "core.gap.im",
-    //     accept: "application/json, text/plain, */*",
-    //     "x-version": "4.5.7",
-    //     "accept-language": "fa",
-    //     "user-agent":
-    //       "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36",
-    //     appversion: "web",
-    //     origin: "https://web.gap.im",
-    //     "sec-fetch-site": "same-site",
-    //     "sec-fetch-mode": "cors",
-    //     "sec-fetch-dest": "empty",
-    //     referer: "https://web.gap.im/",
-    //     "accept-encoding": "gzip, deflate, br",
-    //   },
-    //   name: "CoreGap",
-    //   type: "WEB",
-    // },
-    // {
-    //   url: `https://zancoiran.com:5050/Main/SiteBaseApi/GenerateMobileKey?mobileno=0${number}`,
-    //   name: "ZancoIran",
-    //   type: "WEB",
-    // },
-    // {
-    //   url: "https://ws.alibaba.ir/api/v3/account/mobile/otp",
-    //   data: { phoneNumber: `0${number}` },
-    //   name: "Alibaba",
-    //   type: "WEB",
-    // },
-    // // rand mail required
-    // {
-    //   url: "https://api2.hitro.mobi/api/passengerinfo/InsertPassenger",
-    //   data: {
-    //     ClientId: `0${number}`,
-    //     ClientSecret: "0501098153736800398716253736091541224",
-    //     Name: "kdccs",
-    //     Family: "kdccs",
-    //     Email: `kdccs${randomnum}du@gmail.com`,
-    //   },
-    //   name: "Hitro",
-    //   type: "WEB",
-    // },
-    // {
-    //   url: "https://www.delino.com/user/register",
-    //   data: { mobile: `0${number}` },
-    //   name: "Delino",
-    //   type: "WEB",
-    // },
+    {
+      url: `https://core.gap.im/v1/user/add.json?mobile=0${number}`,
+      name: "CoreGap",
+      type: "WEB",
+    },
     // {
     //   url: "https://api.behtarino.com/api/v1/businesses/uqqnffxwen/vitrin_verification/",
     //   data: { phone: `0${number}` },

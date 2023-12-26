@@ -17,31 +17,6 @@ export const API = (number: number) => {
       method: "POST",
     },
     {
-      url: "https://www.namava.ir/api/v1.0/accounts/registrations/by-phone/request",
-      data: { UserName: `+98${number}` },
-      name: "Namava",
-      type: "APK",
-      method: "POST",
-    },
-    {
-      url: "https://allinco.ir/api/Users/signIn",
-      data: {
-        deviceId: "86eb30f27c0b58bb",
-        hashCode: "Aq1/XpLps/v",
-        mobile: `0${number}`,
-      },
-      name: "Allinco",
-      type: "APK",
-      method: "POST",
-    },
-    {
-      url: "https://api.komodaa.com/api/v2.6/loginRC/request",
-      data: { phone_number: `0${number}` },
-      name: "Komodaa",
-      type: "APK",
-      method: "POST",
-    },
-    {
       url: "https://api.baarbaanet.com/v1/pub/otp/send?operation=REGISTER",
       data: {
         mobile: `0${number}`,
@@ -134,17 +109,6 @@ export const API = (number: number) => {
       method: "POST",
     },
     {
-      url: "http://behtamarket.com//getRegister.php?n=shinaweb&activeBySms=true",
-      data:
-        "e=0" +
-        `${number}` +
-        "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
-      name: "BehtaMarket",
-      type: "APK",
-      method: "POST",
-      package_name: "com.persiandesigners.behtamarket",
-    },
-    {
       url: "https://kasbinoapp.ir/kasbinoEngine1/RequestC",
       data: `{"p1001":"0${number}","p1002":"registerSms","token":"e0d4cc39-b5d3-47ea-8ede-6ead5eed3b8a.e000af00-d00d-0da0-0f00-000d00000cc0","RC":"7be86c2a5b54"}`,
       name: "KasbinoApp",
@@ -163,6 +127,24 @@ export const API = (number: number) => {
       method: "POST",
     },
     {
+      url: "https://student.classino.com/otp/v1/api/login",
+      data: { mobile: `0${number}` },
+      name: "classino",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "http://behtamarket.com//getRegister.php?n=shinaweb&activeBySms=true",
+      data:
+        "e=0" +
+        `${number}` +
+        "&adres=&p=r%24%24tme1&name=wadawdawdawd&em=&moaref=&bazaryab_code=&shahrestan_id=0&codeposti=&tel=",
+      name: "BehtaMarket",
+      type: "APK",
+      method: "POST",
+      package_name: "com.persiandesigners.behtamarket",
+    },
+    {
       url: "http://civapp.ir//getRegister.php?n=shinaweb&activeBySms=true",
       data:
         "e=0" +
@@ -173,6 +155,32 @@ export const API = (number: number) => {
       method: "POST",
       package_name: "com.persiandesigners.civapp",
     },
+    {
+      url: "https://www.namava.ir/api/v1.0/accounts/registrations/by-phone/request",
+      data: { UserName: `+98${number}` },
+      name: "Namava",
+      type: "APK",
+      method: "POST",
+    },
+    {
+      url: "https://allinco.ir/api/Users/signIn",
+      data: {
+        deviceId: "86eb30f27c0b58bb",
+        hashCode: "Aq1/XpLps/v",
+        mobile: `0${number}`,
+      },
+      name: "Allinco",
+      type: "APK",
+      method: "POST",
+    },
+    {
+      url: "https://api.komodaa.com/api/v2.6/loginRC/request",
+      data: { phone_number: `0${number}` },
+      name: "Komodaa",
+      type: "APK",
+      method: "POST",
+    },
+
     // ---------------- GETs ----------------
 
     {

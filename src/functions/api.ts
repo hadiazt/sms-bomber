@@ -3,6 +3,18 @@ export const API = (number: number) => {
   const list = [
     // ---------------- POSTs ----------------
     {
+      url: "https://api.codeyad.com/api/auth/register",
+      data: {
+        email: `kdccs${randomnum}du@gmail.com`,
+        password: String(randomnum) + "@rr",
+        phoneNumber: `0${number}`,
+        rePassword: String(randomnum) + "@rr",
+      },
+      name: "CodeYab",
+      type: "WEB",
+      method: "POST",
+    },
+    {
       url: "https://api.digikala.com/v1/user/authenticate/",
       data: { username: "0" + number, force_send_otp: true },
       name: "DigiKala",

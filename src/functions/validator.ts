@@ -8,9 +8,10 @@ export const Validator = async (Num: string, Loop: string) => {
     return Logger(true, "ERROR :\nWrong Phone Number Type(Must Be Number)");
   } else if (isNaN(parseFloat(Loop))) {
     return Logger(true, "ERROR :\nWrong Loop Type(Must Be Number)");
-  } else if (Num.startsWith("+98") || Num.startsWith("09")) {
-    return Logger(true, "ERROR :\nPlease Enter number Without 0 Or +98");
   } else {
+    if (Num.startsWith("+98")) Num = Num.split("+98").join("");
+    else if (Num.startsWith("09")) Num = Num.slice(1);
+
     const loop = setInterval(() => {
       if (Count === Number(Loop)) {
         clearInterval(loop);

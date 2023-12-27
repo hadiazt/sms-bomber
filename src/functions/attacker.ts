@@ -4,6 +4,7 @@ import { API as APIs } from "./api";
 export const Attacker = async (num: number, Loop: string) => {
   return new Promise((resolve, reject) => {
     const API = APIs(num)[Math.floor(Math.random() * APIs(num).length)];
+    // const API = APIs(num)[0];
     var headers: object;
     headers = API.headers;
 
@@ -18,6 +19,10 @@ export const Attacker = async (num: number, Loop: string) => {
               message: string;
               succeeded: boolean;
               result: boolean;
+              isSuccess: boolean;
+              metaData: {
+                appStatusCode: string;
+              };
               error: { message: string };
             };
           }) => {
@@ -33,6 +38,10 @@ export const Attacker = async (num: number, Loop: string) => {
               reject(`Request From ${API.name} Failed \n${res.data.status}`);
             } else if (API.name === "Civapp" && !res.data) {
               reject(`Request From ${API.name} Failed \n${res.data}`);
+            } else if (API.name === "CodeYab" && !res.data.isSuccess) {
+              reject(
+                `Request From ${API.name} Failed \n${res.data.metaData.appStatusCode}`
+              );
             } else if (res.status === 200) {
               resolve(`Request From ${API.name} Sends To ${num}`);
             }

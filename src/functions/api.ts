@@ -3,6 +3,13 @@ export const API = (number: number) => {
   const list = [
     // ---------------- POSTs ----------------
     {
+      url: "https://auth.navaar.ir/api/UserAccount/register",
+      data: { mobileNo: `0${number}` },
+      name: "Navaar",
+      type: "WEB",
+      method: "POST",
+    },
+    {
       url: "https://api.fidibo.com/identity/login/prepare",
       data: { username: `98-${number}` },
       name: "Fidibo",

@@ -3,6 +3,13 @@ export const API = (number: number) => {
   const list = [
     // ---------------- POSTs ----------------
     {
+      url: "https://api.fidibo.com/identity/login/prepare",
+      data: { username: `98-${number}` },
+      name: "Fidibo",
+      type: "WEB",
+      method: "POST",
+    },
+    {
       url: "https://api.codeyad.com/api/auth/register",
       data: {
         email: `kdccs${randomnum}du@gmail.com`,

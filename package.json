@@ -5,9 +5,9 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "cls && tsc",
-    "start": "cls && tsc && node ./dist/main.js",
-    "dev": "cls && concurrently \"tsc --watch\" \"nodemon -q dist/main.js\""
+    "build": "tsc",
+    "start": "tsc && node ./dist/main.js",
+    "dev": "concurrently \"tsc --watch\" \"nodemon -q dist/main.js\""
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,3 @@
-## Working In Progress
 
 <br/>
 <br/>
@@ -26,7 +25,7 @@
 <br/>
 
 # 🌟 Spread the word!
-hpji
+
 If you want to say thank you and/or support active development of the repo:
 
 - Add a GitHub Star to the project!

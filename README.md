@@ -14,7 +14,7 @@
 
 <br/>
 
-## 🤝 Contributing
+##  Contributing
 
 1. [Fork the repository](https://github.com/hadiazt/sms-bomber/fork)
 2. Clone your fork: `git clone https://github.com/your-username/sms-bomber.git`

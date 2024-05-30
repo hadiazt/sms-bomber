@@ -1,9 +1,3 @@
-## Working In Progress
-
-<br/>
-<br/>
-<br/>
-
 ## 📊 Repo Stats
 
 <p align="left">
